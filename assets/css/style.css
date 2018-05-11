@@ -1,0 +1,26 @@
+#mainlogo {
+    height: 20%; 
+    width: 30%;
+}
+
+body {
+    background-image: url("../images/background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.character-back {
+    border: solid 2px gray;
+    background-color: lightgray;
+    width: 200px;
+    height: 200px;
+    opacity: .8;
+    text-align: center;
+}
+
+#character-icon {
+    width: 70%;
+    width: 70%;
+}
+
