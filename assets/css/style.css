@@ -1,6 +1,6 @@
 #mainlogo {
-    height: 20%; 
-    width: 30%;
+    height: 10%; 
+    width: 15%;
 }
 
 body {
@@ -11,16 +11,16 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
-.character-back {
+.char-box {
     border: solid 3px gray;
     background-color: lightgray;
-    width: 200px;
-    height: 200px;
+    width: 60vh;
+    height: 18vh;
     /* opacity: .8; */
     text-align: center;
 }
 
-#character-icon {
+.char-icon {
     width: 70%;
     width: 70%;
 }
