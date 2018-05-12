@@ -8,14 +8,15 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .character-back {
-    border: solid 2px gray;
+    border: solid 3px gray;
     background-color: lightgray;
     width: 200px;
     height: 200px;
-    opacity: .8;
+    /* opacity: .8; */
     text-align: center;
 }
 
