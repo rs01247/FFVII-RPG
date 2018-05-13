@@ -1,49 +1,66 @@
 window.onload = function () {
 
+    //INITIAL STATE
+    $("#restart-btn").hide();
+
+
     // DECLARING VARIABLES
     var yourChar;
     var oppChar;
-    var attackBtn;
     var messageBox;
-
+    var enemies = [];
+    var playerwin;
 
     function init() {
 
     }
 
+    function updatePlayer () {
+        //FIX THIS LINK, NEEDS TO GO TO PLAYERCHOSEN (CHARACTER.HEALTH)
+        $("#char-health").text(character.health);
+    }
+
+    function updateOpp () {
+
+    }
+
+    function youWin () {
+        
+    }
+
     var characters = [cloud, barret, aeris, tifa, vincent];
 
     var cloud = {
-        name: "cloud",
+        name: "Cloud",
         health: 130,
         attack: 15,
         counter: 10,
     }
 
     var barret = {
-        name: "barret",
-        health: 150,
+        name: "Barret",
+        health: 180,
         attack: 20,
         counter: 15,
     }
 
     var aeris = {
-        name: "aeris",
+        name: "Aeris",
         health: 100,
         attack: 8,
         counter: 10,
     }
 
     var tifa = {
-        name: "tifa",
+        name: "Tifa",
         health: 120,
         attack: 10,
         counter: 10,
     }
 
     var vincent = {
-        name: "vincent",
-        health: 130,
+        name: "Vincent",
+        health: 140,
         attack: 10,
         counter: 20,
     }
@@ -82,7 +99,9 @@ window.onload = function () {
         console.log(oppChar);
     });
 
-
+    $("#restart-btn").on("click", function() {
+        location.reload();
+    });
 
 
 }

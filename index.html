@@ -18,42 +18,50 @@
 <body>
 
     <div class="container-fluid mt-0" id="headerlogo">
-        <nav class="navbar navbar-light bg-transparent justify-content-end p-0">
-            <img id="mainlogo" src="./assets/images/ffvii-logo.png" alt="FFVII Logo">
-            <span class="navbar-brand mt-4 h1 text-light justify-content-center font-weight-bold">RPG</span>
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-light bg-transparent justify-content-end p-0">
+                    <img id="mainlogo" src="./assets/images/ffvii-logo.png" alt="FFVII Logo">
+                    <span class="navbar-brand mt-4 h1 text-light justify-content-center font-weight-bold">RPG</span>
+            </div>
+            <!-- <div class="col-12" id="restart-btn">
+                <nav class="navbar navbar-light bg-transparent justify-content-end mr-5">
+                <button type="button" id="attackBtn" class="btn btn-danger btn-lg ml-2">Attack</button>
+            </div> -->
+        </div>
         </nav>
     </div>
 
     <div class="container-fluid pl-4">
 
-        <div class="row mt-4" id="my-char">
+        <div class="row mt-2" id="my-char">
             <h4 class="ml-1">Choose Your Character</h4>
         </div>
         <div class="row">
             <div class="col-1 m-1 pt-1 char-box">
                 <h6 class="text-danger">Cloud</h6>
-                <img class="char-icon" src="./assets/images/cloud-face-icon.jpg" alt="Cloud Strife">
-                <h6 class="text-danger mt-2">100</h6>
+                <img class="char-icon" src="./assets/images/cloud-face-icon.jpg" alt="Cloud Strife" data-obj="cloud">
+                <h6 id="char-health" class="text-danger mt-2">130</h6>
             </div>
             <div class="col-1 m-1 pt-1 char-box">
                 <h6 class="text-danger">Barret</h6>
-                <img class="char-icon" src="./assets/images/barret-face-icon.jpg" alt="Barret">
-                <h6 class="text-danger mt-2">100</h6>
+                <img class="char-icon" src="./assets/images/barret-face-icon.jpg" alt="Barret" data-obj="barret">
+                <h6 id="char-health" class="text-danger mt-2">180</h6>
             </div>
             <div class="col-1 m-1 pt-1 char-box">
                 <h6 class="text-danger">Aeris</h6>
-                <img class="char-icon" src="./assets/images/aeris-face-icon.jpg" alt="Aeris">
-                <h6 class="text-danger mt-2">100</h6>
+                <img class="char-icon" src="./assets/images/aeris-face-icon.jpg" alt="Aeris" data-obj="aeris">
+                <h6 id="char-health" class="text-danger mt-2">100</h6>
             </div>
             <div class="col-1 m-1 pt-1 char-box">
                 <h6 class="text-danger">Tifa</h6>
-                <img class="char-icon" src="./assets/images/tifa-face-icon.jpg" alt="Tifa">
-                <h6 class="text-danger mt-2">100</h6>
+                <img class="char-icon" src="./assets/images/tifa-face-icon.jpg" alt="Tifa" data-obj="tifa">
+                <h6 id="char-health" class="text-danger mt-2">120</h6>
             </div>
             <div class="col-1 m-1 pt-1 char-box">
                 <h6 class="text-danger">Vincent</h6>
-                <img class="char-icon" src="./assets/images/vincent-face-icon.jpg" alt="Vincent">
-                <h6 class="text-danger mt-2">100</h6>
+                <img class="char-icon" src="./assets/images/vincent-face-icon.jpg" alt="Vincent" data-obj="vincent">
+                <h6 id="char-health" class="text-danger mt-2">140</h6>
             </div>
         </div>
 
@@ -85,7 +93,9 @@
         <div class="row" id="defender">
 
         </div>
-
+        <div class="row">
+            <button type="button" id="restart-btn" class="btn btn-warning btn-lg btn-block">Click to Restart Game!</button>
+        </div>
     </div>
 
 </body>
