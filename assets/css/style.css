@@ -1,6 +1,10 @@
 #mainlogo {
     height: 10%; 
-    width: 15%;
+    width: 25%;
+}
+
+#headerlogo {
+    position: fixed;    
 }
 
 body {
@@ -15,13 +19,28 @@ body {
     border: solid 3px gray;
     background-color: lightgray;
     width: 60vh;
-    height: 18vh;
+    height: 20vh;
     /* opacity: .8; */
     text-align: center;
 }
 
 .char-icon {
-    width: 70%;
-    width: 70%;
+    width: 80%;
+    width: 80%;
+}
+
+#player-char {
+    background-color: white;
+    border: solid 3px green;
+}
+
+#select-char {
+    background-color: lightsalmon;
+    border: solid 3px red;
+}
+
+#opp-char {
+    background-color: darkslategrey;
+    border: solid 3px black;
 }
 

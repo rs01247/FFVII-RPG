@@ -16,73 +16,73 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-light bg-transparent justify-content-end">
+
+    <div class="container-fluid mt-0" id="headerlogo">
+        <nav class="navbar navbar-light bg-transparent justify-content-end p-0">
             <img id="mainlogo" src="./assets/images/ffvii-logo.png" alt="FFVII Logo">
             <span class="navbar-brand mt-4 h1 text-light justify-content-center font-weight-bold">RPG</span>
         </nav>
     </div>
 
-        <div class="container-fluid pl-4">
-            <div class="row">
-                <div id="my-char" class="mt-2">
-                    <h4>Choose Your Character</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1 m-1 pt-1 char-box">
-                    <h6 class="text-danger">Cloud</h6>
-                    <img class="char-icon" src="./assets/images/cloud-face-icon.jpg" alt="Cloud Strife">
-                    <h6 class="text-danger mt-2">100</h6>
-                </div>
-                <div class="col-1 m-1 pt-1 char-box">
-                    <h6 class="text-danger">Barret</h6>
-                    <img class="char-icon" src="./assets/images/barret-face-icon.jpg" alt="Barret">
-                    <h6 class="text-danger mt-2">100</h6>
-                </div>
-                <div class="col-1 m-1 pt-1 char-box">
-                    <h6 class="text-danger">Aeris</h6>
-                    <img class="char-icon" src="./assets/images/aeris-face-icon.jpg" alt="Aeris">
-                    <h6 class="text-danger mt-2">100</h6>
-                </div>
-                <div class="col-1 m-1 pt-1 char-box">
-                    <h6 class="text-danger">Tifa</h6>
-                    <img class="char-icon" src="./assets/images/tifa-face-icon.jpg" alt="Tifa">
-                    <h6 class="text-danger mt-2">100</h6>
-                </div>
-                <div class="col-1 m-1 pt-1 char-box">
-                    <h6 class="text-danger">Vincent</h6>
-                    <img class="char-icon" src="./assets/images/vincent-face-icon.jpg" alt="Vincent">
-                    <h6 class="text-danger mt-2">100</h6>
-                </div>
-                <!-- <div id="your-char">
+    <div class="container-fluid pl-4">
 
-            </div> -->
+        <div class="row mt-4" id="my-char">
+            <h4 class="ml-1">Choose Your Character</h4>
+        </div>
+        <div class="row">
+            <div class="col-1 m-1 pt-1 char-box">
+                <h6 class="text-danger">Cloud</h6>
+                <img class="char-icon" src="./assets/images/cloud-face-icon.jpg" alt="Cloud Strife">
+                <h6 class="text-danger mt-2">100</h6>
             </div>
-
-            <div class="row mt-2">
-                <h4>Enemies Available to Attack</h4>
+            <div class="col-1 m-1 pt-1 char-box">
+                <h6 class="text-danger">Barret</h6>
+                <img class="char-icon" src="./assets/images/barret-face-icon.jpg" alt="Barret">
+                <h6 class="text-danger mt-2">100</h6>
             </div>
-            <div class="row" id="enemies-avail">
-
+            <div class="col-1 m-1 pt-1 char-box">
+                <h6 class="text-danger">Aeris</h6>
+                <img class="char-icon" src="./assets/images/aeris-face-icon.jpg" alt="Aeris">
+                <h6 class="text-danger mt-2">100</h6>
             </div>
-            <div class="row mt-2">
-                <h4>Fight Section</h4>
+            <div class="col-1 m-1 pt-1 char-box">
+                <h6 class="text-danger">Tifa</h6>
+                <img class="char-icon" src="./assets/images/tifa-face-icon.jpg" alt="Tifa">
+                <h6 class="text-danger mt-2">100</h6>
             </div>
-
-            <div class="row" id="fight-section">
-                <button type="button" id="button" class="btn btn-danger btn-lg ml-2">Attack</button>
-            </div>
-
-            <div class="row mt-2">
-                <h4>Defender</h4>
-            </div>
-            <div class="row" id="defender">
-
+            <div class="col-1 m-1 pt-1 char-box">
+                <h6 class="text-danger">Vincent</h6>
+                <img class="char-icon" src="./assets/images/vincent-face-icon.jpg" alt="Vincent">
+                <h6 class="text-danger mt-2">100</h6>
             </div>
         </div>
 
-        <div class="row" id="messagebox">
+        <div class="row">
+            <div class="col-3 p-0">
+                <h4 class="ml-1">Fight Section</h4>
+                <div id="fight-section">
+                    <button type="button" id="button" class="btn btn-danger btn-lg ml-2">Attack</button>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="justify-content-center" id="messagebox">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <h4 class="ml-1">Enemies Available to Attack</h4>
+        </div>
+        <div class="row" id="enemies-avail">
+
+        </div>
+
+        <div class="row mt-2">
+            <h4 class="ml-1">Defender</h4>
+        </div>
+
+        <div class="row" id="defender">
 
         </div>
 

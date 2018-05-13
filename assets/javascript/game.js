@@ -6,25 +6,30 @@ window.onload = function () {
     var otherChar;
     var attackBtn;
     var messageBox;
-    var clicked;
+    var startClick;
 
     $(".char-box").on("click", function () {
-        if (!clicked) {
+        if (!startClick) {
 
-            clicked = this;
-            $("#my-char").html("<h3>Your Character</h3>");
-            $(this).data("clicked", true);
+            startClick = this;
+            $("#my-char").html("<h4>Your Character</h4>");
+            $(this).data("startClick", true);
+            $(this).attr("id", "player-char");
+
             console.log(this);
+
             $.each($(".char-box"), function (key, element) {
-                if (clicked !== element) {
+                if (startClick !== element) {
                     $("#enemies-avail").append(element);
+                    $(element).attr("id", "select-char");  
                 }
                 console.log(element);
             });
         }
 
         else {
-
+            $("#defender").append(this);
+            $(this).attr("id", "opp-char");
         }
     });
 
