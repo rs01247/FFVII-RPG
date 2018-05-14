@@ -21,6 +21,8 @@ Once the enemy is defeated, the user must select another character until there a
 No more opponents = victory!
 
 
+*** THIS GAME IS A NON-PROFIT FAN-MADE PROJECT AND IN NO WAY CONNECTED TO SQUARE ENIX ***
+
 5/13/19 CURRENT BUGS
 
 - CANNOT PROPERLY LOG ENEMY HEALTH ON CHAR-HEALTH DIV
