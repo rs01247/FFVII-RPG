@@ -1,3 +1,15 @@
+
+
+
+
+// CURRENTLY
+
+// - CANNOT PROPERLY LOG ENEMY HEALTH ON CHAR-HEALTH DIV
+// - AFTER FIRST OPP DEFEAT, SELECTING A NEW OPP BRINGS ALL CHARACTERS TO FIRST DIV
+// - NEED TO FIND A WAY TO CLEAR MESSAGE DIV
+// - GAME CURRENTLY SET TO VICTORY ON (enemies.length == 3) JUST TO SHOW VICTORY SCREEN
+
+
 window.onload = function () {
 
     //INITIAL STATE
@@ -12,6 +24,7 @@ window.onload = function () {
     var playerwin;
     var battleTheme = new Audio("./assets/audio/battletheme.mp3");
     var fanfare = new Audio("./assets/audio/fanfare.mp3");
+    var atkSound = new Audio("./assets/audio/punch.mp3");
 
     var cloud = {
         name: "Cloud",
@@ -24,16 +37,16 @@ window.onload = function () {
     var barret = {
         name: "Barret",
         health: 180,
-        attack: 20,
-        baseAttack: 20,
+        attack: 10,
+        baseAttack: 10,
         counter: 15,
     }
 
     var aeris = {
         name: "Aeris",
         health: 100,
-        attack: 8,
-        baseAttack: 8,
+        attack: 15,
+        baseAttack: 15,
         counter: 10,
     }
 
@@ -48,8 +61,8 @@ window.onload = function () {
     var vincent = {
         name: "Vincent",
         health: 140,
-        attack: 10,
-        baseAttack: 10,
+        attack: 8,
+        baseAttack: 8,
         counter: 20,
     }
 
@@ -87,13 +100,14 @@ window.onload = function () {
             $("#defender").append(this);
             $(this).attr("id", "opp-char");
             oppChar = eval($(this).attr("character"));
-            var oppHealth = $(this).attr("#char-health");
             console.log(oppChar);
             console.log(this);
         }
     });
 
     $("#attackBtn").on("click", function () {
+        atkSound.play();
+
         if (activeBattle == true) {
             oppChar.health -= yourChar.attack;
             yourChar.attack += yourChar.baseAttack;
