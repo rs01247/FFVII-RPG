@@ -1,7 +1,7 @@
 window.onload = function () {
 
     //INITIAL STATE
-    // $("#restart-btn").hide();
+    $("#restart-btn").hide();
 
     // DECLARING VARIABLES
     var startBox;
@@ -65,7 +65,6 @@ window.onload = function () {
 
             startBox = this;
             yourChar = eval($(this).attr("character"));
-            // $(this).data("yourChar", true);
             $(this).attr("id", "player-char");
             activeBattle = true;
             console.log(startBox);
@@ -77,6 +76,8 @@ window.onload = function () {
                     $("#enemies-avail").append(element);
                     $(element).attr("character");
                     $(element).attr("id", "select-char");
+                    enemies.push(element);
+                    console.log(enemies.length);
                 }
             });
         }
@@ -86,7 +87,9 @@ window.onload = function () {
             $("#defender").append(this);
             $(this).attr("id", "opp-char");
             oppChar = eval($(this).attr("character"));
+            var oppHealth = $(this).attr("#char-health");
             console.log(oppChar);
+            console.log(this);
         }
     });
 
@@ -94,23 +97,49 @@ window.onload = function () {
         if (activeBattle == true) {
             oppChar.health -= yourChar.attack;
             yourChar.attack += yourChar.baseAttack;
+
+            $("#messagebox").html(yourChar.name + " attacked " + oppChar.name + " for " + yourChar.baseAttack + " damage ")
+            $("#messagebox").append("<br>" + oppChar.name + " countered " + yourChar.name + " for " + oppChar.counter + " damage ")
+
             updateOpp()
+
             console.log(yourChar);
             console.log(oppChar);
+            console.log(enemies.length);
+
+            if (oppChar.health <= 0) {
+                $("#defender").remove();
+                enemies.length--;
+                console.log(enemies);
+                activeBattle = false;
+
+                if (enemies.length == 3)
+                    var enemyLeft = false;
+                for (i = 0; i < enemies.length; i++) {
+                    if (enemies[i].health > 0) {
+                        enemyLeft = true;
+                    }
+                    if (enemyLeft == false) {
+                        playerwin = true;
+                        youWin();
+                    }
+                }
+            }
+
+            else {
+                yourChar.health -= oppChar.counter;
+                updatePlayer();
+                if (yourChar.health <= 0) {
+                    youLose();
+                }
+            }
         }
     });
-
-
 
     $("#restart-btn").on("click", function () {
         location.reload();
     });
 
-
-
-    function init() {
-
-    }
 
     function updatePlayer() {
         $("#char-health").text(yourChar.health);
@@ -121,7 +150,15 @@ window.onload = function () {
     }
 
     function youWin() {
-
+        $("#messagebox").html("VICTORY!")
+        $("#restart-btn").show();
+        battleTheme.pause();
+        fanfare.play();
     }
 
+    function youLose() {
+        $("#messagebox").html("GAME OVER!");
+        $("#restart-btn").show();
+        battleTheme.pause();
+    }
 }
