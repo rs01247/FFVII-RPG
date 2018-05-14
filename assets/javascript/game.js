@@ -115,7 +115,9 @@ window.onload = function () {
             $("#messagebox").html(yourChar.name + " attacked " + oppChar.name + " for " + yourChar.baseAttack + " damage ")
             $("#messagebox").append("<br>" + oppChar.name + " countered " + yourChar.name + " for " + oppChar.counter + " damage ")
 
-            updateOpp()
+            // NEED TO HAVE OPPONENT AND CURRENT PLAYER HEALTH UPDATE INDEPENDENTLY
+            
+            // updateOpp()
 
             console.log(yourChar);
             console.log(oppChar);
