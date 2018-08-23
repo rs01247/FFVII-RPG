@@ -1,6 +1,4 @@
-# unit-4-game
-
-FINAL FANTASY VII RPG GAME!
+# FINAL FANTASY VII RPG GAME
 
 This program is a fan-made, basic RPG Game based off the 1997 Playstation title, Final Fantasy VII.
 
