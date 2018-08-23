@@ -20,6 +20,7 @@ Once the enemy is defeated, the user must select another character until there a
 
 No more opponents = victory!
 
+Deployed version of this current app can be found [here](https://rs01247.github.io/ffvii-rpg-game/)
 
 *** THIS GAME IS A NON-PROFIT FAN-MADE PROJECT AND IN NO WAY CONNECTED TO SQUARE ENIX ***
 
